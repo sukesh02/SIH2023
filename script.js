@@ -1,3 +1,5 @@
+// import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 // Create a scene
 const scene = new THREE.Scene();
 
@@ -10,6 +12,8 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.getElementById('scene-container').appendChild(renderer.domElement);
 
+// controls = new OrbitControls(camera, renderer.domElement);
+// controls.enableDamping = true;
 
 // Load the glTF model
 const loader = new THREE.GLTFLoader();
@@ -42,11 +46,7 @@ const animate = () => {
 };
 animate();
 
-// import * as THREE from 'https://cdn.skypack.dev/three';
-// import { OrbitControls } from 'https://cdn.skypack.dev/three/examples/jsm/controls/OrbitControls.js';
-// import { GLTFLoader } from 'https://cdn.skypack.dev/three/examples/jsm/loaders/GLTFLoader.js';
-
-
+// import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 // var scene, camera, renderer, controls;
 
 // function init() {
